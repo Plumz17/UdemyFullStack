@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --color-primary: #4A70A9;
+    --color-secondary: #8FABD4;
+    --color-bg: #EFECE3;
+}
+
+body {
+    background-color: var(--color-bg);
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    margin: 0;
+}
+
+button {
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    font-family: inherit;
+    corner-shape: squircle;
+    font-size: large;
+    font-weight: 400;
+    border-radius: 12px;
+    border: 0;
+    width: 150px;
+    height: 50px;
+}
+
+/* Header */
+.icon-circle {
+    border-radius: 50%;
+    width: 60px;
+}
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 67px;
+    margin: 5% 12%;
+    gap: 3%
+}
+
+.navbar-container > a {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+    white-space: nowrap;
+}
+
+.navbar-button {
+    margin: 0;
+    white-space: nowrap;
+}
+.navbar-container > img {
+    margin-right: auto;
+}
+
+
+/* Hero Section */
+.hero-container {
+    display: flex;
+    margin: 70px 12%;
+    justify-content: space-between;
+}
+.hero-left {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
+.hero-left > * {
+    margin: 0px 10px;
+    font-size: 1.4rem;
+}
+.hero-greeting {
+    font-weight: 600;
+}
+.hero-name {
+    min-width: 400px;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--color-primary);
+}
+.hero-title {
+    padding: 0px;
+    font-weight: 700;
+    font-size:5.5rem;
+    line-height: 1.1;
+}
+.hero-title > span {
+    text-align: right;
+    display: block;
+}
+.hero-text {
+    min-width: 400px;
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+.hero-button {
+    margin-top: 20px;
+    font-size: large;
+}
+.hero-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px
+}
+.hero-right > img {
+    width:70%;
+    border-radius: 50%;
+    border: 2px solid var(--color-primary);
+}
+.hero-icons {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/*Skills section*/
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.section-title {
+    font-weight: 600;
+    font-size: 3.5rem;
+    margin: 0px;
+    text-align: center;
+}
+.section-text {
+    margin-top: 0;
+    text-align: center;
+    width: 50%;
+    font-size: 1.3rem;
+}
+.skills-boxes {
+    display: flex;
+    margin: 0% 16%;
+    margin-bottom: 5%;
+    gap: 2%
+}
+.skills-box {
+    flex: 1;
+    padding: 2% 2%;
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.skills-icon {
+    padding-top: 1%;
+    width: 100px
+}
+.skills-box h2{
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 0.9;
+    margin-bottom: 0;
+}
+.skills-box p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+
+/* Projects section */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.projects-options {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+} 
+
+.projects-options button {
+    width: auto;
+    height: auto;
+    padding: 1.5% 3%;
+    white-space: nowrap;
+    background-color: var(--color-secondary);
+    font-size: x-large;
+}
+
+#selected-item {
+    background-color: var(--color-primary);
+}
+
+.projects-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4% 12%;
+    justify-content: center;
+    gap: 10%;
+    row-gap: 20px;
+}
+.projects-item {
+    width: 40%;
+}
+.projects-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+.project-id {
+    color: var(--color-primary);
+    margin-bottom: 0;
+}
+.project-title {
+    margin: 0px;
+}
+.project-description {
+    margin: 0px;
+    font-size: yrem;
+    width:100%
+}
+/* Contact Section */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2% 30%;
+    margin-bottom: 5%;
+}
+.contact-container .section-text {
+    width: 100%
+}
+.contact-content {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    gap: 16px
+}
+.contact-field {
+    flex: 4;
+}
+.contact-field input {
+    box-sizing: border-box;
+    width: 100%;
+    corner-shape: squircle;
+    font-size: medium;
+    font-weight: 400;
+    border-radius: 12px;
+    border: 1px solid grey;
+    height: 50px;
+    font-family: "Poppins";
+    padding: 0px 10px;
+}
+.contact-button {
+    flex: 1;
+    font-weight: 600;
+}
+/* Footer Section */
+.footer-container {
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+.footer-container p {
+    color: var(--color-bg);
+}
+.footer-container span {
+    color: var(--color-secondary)
+}
+
+@media (max-width: 1000px) {
+    .icon-circle {
+        display: none;
+    }
+    .navbar-container {
+        height: auto;
+        justify-content: space-around;
+        margin: 2% 0%;
+        gap: 0;
+    }
+    .navbar-container > a {
+        font-size: 0.8rem;
+    }
+    .navbar-button {
+        width:100px;
+        height: 40px;
+        font-size: small;
+    }
+    .hero-container {
+        flex-direction: column;
+    }
+    .hero-right {
+        margin-top: 10%;
+        width: auto;
+        align-items: center;
+    }
+    .section-text {
+        width: 100%
+    }
+    .skills-boxes {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .projects-options {
+        flex-direction: column;
+        gap: 10px;
+        width: 80%;
+    }
+    .projects-item {
+        width: 100%;
+    }
+    .contact-container {
+        margin: 2% 2%;
+    }
+}
+@media (max-width: 768px) {
+    .hero-title {
+        font-size:4.5rem;
+    }
+}
