@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life Expectancy Calculator</title>
+</head>
+
+<body>
+  <h1>Life Expectancy Calculator</h1>
+  <form action="/submit" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" required>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" name="dob" required>
+
+    <label for="country">Country:</label>
+    <select name="country">
+      <option value="World">World Average</option>
+      <option value="Japan">Japan</option>
+      <option value="USA">USA</option>
+      <option value="India">India</option>
+    </select>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+
+</html>

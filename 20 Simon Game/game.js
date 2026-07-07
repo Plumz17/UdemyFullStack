@@ -29,20 +29,7 @@ function nextSequence() {
     $("h1").text("Level " + level);
 }
 
-// User Click
-$(".btn").on("click", function() {
-    console.log("Game Started: " + gameStarted);
-    if (gameStarted === false) {
-        return;
-    }
-    var userChosenColour = $(this).attr("id");
-    userClickedPattern.push(userChosenColour);
-    checkAnswer(userClickedPattern.length - 1);
-    playSound(userChosenColour);
-    animatePress(userChosenColour);
-})
-
-// Should be called once per level
+// Should be called once per click
 function checkAnswer(currentIndex) {
     if(userClickedPattern[currentIndex] != gamePattern[currentIndex]) {
         gameOver();
@@ -69,6 +56,19 @@ function gameOver() {
     gameStarted = false;
     level = 0;
 }
+
+// User Click
+$(".btn").on("click", function() {
+    console.log("Game Started: " + gameStarted);
+    if (gameStarted === false) {
+        return;
+    }
+    var userChosenColour = $(this).attr("id");
+    userClickedPattern.push(userChosenColour);
+    checkAnswer(userClickedPattern.length - 1);
+    playSound(userChosenColour);
+    animatePress(userChosenColour);
+})
 
 //First Key Press to start game
 $(document).on("keydown", function() {
