@@ -1,0 +1,37 @@
+<%- include("partials/header.ejs") %>
+    <div class="content-container">
+        <div class="blogs-container">
+            <% if (locals.blogs) {%>
+                <% blogs.forEach((blog, index)=> { %>
+                    <div class="blog-container">
+                        <h2>
+                            <%= blog.blogTitle %>
+                        </h2>
+                        <p>
+                            <%= blog.blogContent %>
+                        </p>
+                        <form action="/delete" method="POST" class="delete-button">
+                            <input type="hidden" name="index" value=<%=index %>/>
+                            <button class="delete-button" type="submit">Delete</button>
+                        </form>
+                    </div>
+                    <% }); }%>
+        </div>
+        <div class="input-container-container">
+            <div class="input-container">
+                <h2>Post Wog</h2>
+                <form action="/submit" method="POST" class="input-form">
+                    <label for="blogTitle">Blog Title</label>
+                    <input type="text" id="blogTitle" name="blogTitle" class="input-field">
+                    <label for="blogContent">Blog Content</label>
+                    <textarea id="blogContent" name="blogContent" rows="10" cols="50" class="input-field"/></textarea>
+                    <button type="submit">Create Post</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </body>
+
+    </html>
+
+    <%- include("partials/footer.ejs") %>
