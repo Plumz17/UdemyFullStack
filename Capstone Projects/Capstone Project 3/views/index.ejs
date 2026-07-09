@@ -10,23 +10,42 @@
                         <p>
                             <%= blog.blogContent %>
                         </p>
-                        <form action="/delete" method="POST" class="delete-button">
-                            <input type="hidden" name="index" value=<%=index %>/>
-                            <button class="delete-button" type="submit">Delete</button>
-                        </form>
+                        <div class="button-container">
+                            <form action="/edit" method="POST">
+                                <input type="hidden" name="index" value=<%=index %>/>
+                                <button type="submit">Edit</button>
+                            </form>
+                            <form action="/delete" method="POST">
+                                <input type="hidden" name="index" value=<%=index %>/>
+                                <button type="submit">Delete</button>
+                            </form>
+                        </div>
                     </div>
                     <% }); }%>
         </div>
         <div class="input-container-container">
             <div class="input-container">
                 <h2>Post Wog</h2>
-                <form action="/submit" method="POST" class="input-form">
-                    <label for="blogTitle">Blog Title</label>
-                    <input type="text" id="blogTitle" name="blogTitle" class="input-field">
-                    <label for="blogContent">Blog Content</label>
-                    <textarea id="blogContent" name="blogContent" rows="10" cols="50" class="input-field"/></textarea>
-                    <button type="submit">Create Post</button>
-                </form>
+                <% if (currentBlogIndex !== undefined) { %>
+                    <!-- Update Post-->
+                    <form action="/update" method="POST" class="input-form">
+                        <input type="hidden" name="index" value="<%= currentBlogIndex %>"/>
+                        <label for="blogTitle">Blog Title</label>
+                        <input type="text" id="blogTitle" name="blogTitle" class="input-field" value = <%= currentBlogTitle %>>
+                        <label for="blogContent">Blog Content</label>
+                        <textarea id="blogContent" name="blogContent" rows="10" cols="50" class="input-field" value = <%= currentBlogContent %>/></textarea>
+                        <button type="submit">Update Post</button>
+                    </form>
+                <% } else { %>
+                    <!-- New Post -->
+                    <form action="/submit" method="POST" class="input-form">
+                        <label for="blogTitle">Blog Title</label>
+                        <input type="text" id="blogTitle" name="blogTitle" class="input-field">
+                        <label for="blogContent">Blog Content</label>
+                        <textarea id="blogContent" name="blogContent" rows="10" cols="50" class="input-field"/></textarea>
+                        <button type="submit">Create Post</button>
+                    </form>
+                <% } %>
             </div>
         </div>
     </div>

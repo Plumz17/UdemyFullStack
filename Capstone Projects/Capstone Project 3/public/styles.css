@@ -92,6 +92,10 @@ button {
     align-content: center;
 }
 
+button:hover {
+    background-color: var(--color-secondary);
+}
+
 .input-container > h2 {
     margin: 0;
     text-align: center;
@@ -119,9 +123,12 @@ button {
     flex-direction: column;
 }
 
-.delete-button {
+.button-container {
+    display: flex;
     align-self: flex-end;
+    gap: 5px
 }
+
 
 .footer-container {
     background-color: var(--color-primary);
