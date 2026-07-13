@@ -8,11 +8,11 @@
 </head>
 <body>
     <div>
-        <h1>GameGuessr</h1>
+        <h1><%= message %> <br> <%= gameTitle %></h1>
         <img src="<%= gameImageURL %>" alt="Game cover">
-        <form action="/check" method="POST">
-            <input type="text" name="gameTitle" autocomplete="off">
-            <button type="submit">Check</button>
+        <form action="/" method="POST">
+            <input type="hidden" value=""">
+            <button type="submit">Next</button>
         </form>
         <div class="scores">
             <p>Score: <%= score %></p>

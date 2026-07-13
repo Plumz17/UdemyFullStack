@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+:root {
+    --ink-black: #001524ff;
+    --stormy-teal: #15616dff;
+    --papaya-whip: #ffecd1ff;
+    --vivid-tangerine: #ff7d00ff;
+}
+
+body {
+    background-color: var(--stormy-teal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Open Sans", sans-serif;
+    color: var(--ink-black);
+}
+
+body > div {
+    width: 576px;
+    height: 80vh;
+    background-color: var(--papaya-whip);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    width: 90%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+form > * {
+    margin: 10px;
+    font-size: large;
+    font-weight: 600;
+    border: 0;
+    border-radius: 6px;
+}
+
+form > input {
+    height: 30px;
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+form > button {
+    height: 40px;
+    color: var(--papaya-whip);
+    background-color: var(--vivid-tangerine);
+    width: 40%;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+}
+
+form > button:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px); 
+}
+
+form > button:active {
+  transform: translateY(0); 
+  background-color: #cc8467;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.scores {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  body > div {
+    width: 90%;
+  }
+}
